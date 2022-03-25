@@ -16,7 +16,7 @@ const Books = () => {
             <h2>All Books:{books.length} </h2>
             <div className="full-container">
                 <div className="book-list">
-                <div class="row row-cols-1 row-cols-md-3 ">
+                <div class="row row-cols-1 row-cols-md-3 g-4 ">
             {
                 books.map((book)=> <Book
                 key={book._id}

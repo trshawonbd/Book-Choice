@@ -1,3 +1,12 @@
 .card-pic{
     height: 300px;
 }
+
+.add-to-read{
+    width:100%;
+    padding: 5px;
+    border: 1px solid crimson;
+    background-color: #1b2533;
+    color: aliceblue;
+    font-weight: bold;
+}
