@@ -1,0 +1,25 @@
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b2533;
+    padding: 15px;
+}
+
+.logo img{
+    height: 60px;
+    width: 80px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    margin-right: 30px;
+    font-size:large;
+    font-weight: bold;
+    color: wheat;
+}
+
+.nav-menu a:hover{
+    color: #fdaf54;
+}
