@@ -8,3 +8,11 @@
     position: sticky;
     top:0;
 }
+
+.btn-select, .btn-remove{
+    padding: 10px;
+    border: 1px solid crimson;
+    background-color: #1b2533;
+    color: crimson;
+    font-weight: bold;
+}

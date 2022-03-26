@@ -11,6 +11,8 @@ const Selection = (props) => {
             <div className='title'>
                 {name}
             </div>
+
+            
         </div>
     );
 };

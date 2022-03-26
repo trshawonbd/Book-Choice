@@ -41,6 +41,16 @@ const Books = () => {
                         item = {item}
                         >Name:{item.name}</Selection>)
                         }
+            <div className='d-flex justify-content-center'>
+            <div>
+             <button className='btn-select me-3'>Select One for Me</button>
+            </div>
+            <div>
+             <button className='btn-remove'>Remove All</button>
+            </div>
+
+            </div>
+
 
                 </div>
             </div>               
