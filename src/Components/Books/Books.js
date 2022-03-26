@@ -1,23 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import Book from '../Book/Book';
+import Random from '../Random/Random';
 import Selection from '../Selection/Selection';
 import './Books.css'
 
 const Books = () => {
     const [books, setBooks] = useState ([]);
     const [cart, setCart] = useState([])
-    console.log(cart)
-
+    const [random, setRandom] = useState(false)
+    
+   
     useEffect(() => {
         fetch('products.json')
         .then(res => res.json())
         .then(data => setBooks(data))
     },[])
-
+    
     const handler = (book) =>{
+        setRandom(false)
         const newCart = [...cart, book];
         setCart(newCart)
+       
 
+    }
+
+
+    const randomValue = (cart) =>{
+     const getRandomValue = cart[Math.floor(Math.random() * cart.length)]
+       setRandom(getRandomValue,true)
+       setCart([])
+       
+        
+
+    }
+
+    const delete1 = (cart) =>{
+        setCart([])
     }
 
     return (
@@ -35,21 +53,28 @@ const Books = () => {
                 </div>
                 <div className="order-container">
                     <h2>order Summary</h2>
+                    <Random random={random}
+                        item = {cart}
+                        ></Random>
                         {
                         cart.map((item)=> <Selection
                         key={item._id}
                         item = {item}
                         >Name:{item.name}</Selection>)
                         }
+                        
+
             <div className='d-flex justify-content-center'>
             <div>
-             <button className='btn-select me-3'>Select One for Me</button>
+             <button onClick={()=> randomValue(cart)} className='btn-select me-3' >Select One for Me</button>
             </div>
             <div>
-             <button className='btn-remove'>Remove All</button>
+             <button onClick={()=> delete1(cart)} className='btn-remove'>Remove All</button>
             </div>
 
             </div>
+
+                
 
 
                 </div>
