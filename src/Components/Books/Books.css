@@ -3,3 +3,8 @@
     grid-template-columns: 3fr 1fr;
     
 }
+
+.order-container{
+    position: sticky;
+    top:0;
+}

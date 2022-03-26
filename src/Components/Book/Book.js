@@ -4,7 +4,7 @@ import React from 'react';
 import './Book.css'
 
 const Book = (props) => {
-    console.log(props.book)
+    /* console.log(props) */
     const {name, picture, price} = props.book;
     return (
             <div class="col">
@@ -14,8 +14,7 @@ const Book = (props) => {
                         <h5 class="card-title">{name}</h5>
                         <p class="card-text">{price}</p>
                         <div>
-                        <button className='add-to-read'>Add To Read <FontAwesomeIcon icon={faBookOpen} /> </button>
-                        
+                        <button onClick={() => props.handler(props.book)} className='add-to-read'>Add To Read <FontAwesomeIcon icon={faBookOpen} /> </button>
 
                         </div>
 
