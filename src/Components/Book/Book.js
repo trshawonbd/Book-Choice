@@ -11,8 +11,8 @@ const Book = (props) => {
                 <div class="card h-100">
                     <img src={picture} class="card-img-top card-pic" alt="" srcset="" />
                     <div class="card-body">
-                        <h5 class="card-title">{name}</h5>
-                        <p class="card-text">{price}</p>
+                        <h5 class="card-title">Book Name:{name}</h5>
+                        <p class="card-text">Price: {price} BDT</p>
                         <div>
                         <button onClick={() => props.handler(props.book)} className='add-to-read'>Add To Read <FontAwesomeIcon icon={faBookOpen} /> </button>
 

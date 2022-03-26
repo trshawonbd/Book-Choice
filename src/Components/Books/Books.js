@@ -7,7 +7,7 @@ import './Books.css'
 const Books = () => {
     const [books, setBooks] = useState ([]);
     const [cart, setCart] = useState([])
-    const [random, setRandom] = useState(false)
+    const [random, setRandom] = useState([])
     
    
     useEffect(() => {
@@ -17,7 +17,7 @@ const Books = () => {
     },[])
     
     const handler = (book) =>{
-        setRandom(false)
+        setRandom([])
         const newCart = [...cart, book];
         setCart(newCart)
        
@@ -26,16 +26,18 @@ const Books = () => {
 
 
     const randomValue = (cart) =>{
+        setRandom([])
      const getRandomValue = cart[Math.floor(Math.random() * cart.length)]
-       setRandom(getRandomValue,true)
+       setRandom(getRandomValue)
        setCart([])
        
-        
+
 
     }
 
     const delete1 = (cart) =>{
         setCart([])
+        setRandom([])
     }
 
     return (
